@@ -1,0 +1,68 @@
+// .custom-height {
+//   height: calc(100vh - 9rem);
+// }
+
+// .main {
+//   @apply w-full flex justify-center items-center;
+//   @apply custom-height;
+// }
+
+// .container {
+//   @apply w-48 bg-stone-200 rounded-lg text-center p-3;
+// }
+
+// .btn {
+//   @apply block w-full bg-black text-white mt-2 border-none;
+// }
+
+#main {
+  @apply w-full h-full flex-wrap flex;
+}
+
+
+#main .custom-card {
+  @apply basis-[24%] pt-3 pb-4 mx-1 mt-2 border rounded flex flex-col text-center duration-500 shadow-md;
+}
+
+#main .custom-card:hover {
+  .read-more-btn {
+    @apply bg-black border-white;
+  }
+  i {
+    @apply text-white;
+  }
+  @apply bg-black text-white;
+}
+#main .custom-card i {
+  @apply text-green-400 mb-4 text-lg;
+}
+
+#main .custom-card .title {
+  @apply font-bold mx-0 mt-1 mb-[22px];
+}
+
+.title {
+  @apply font-bold mx-0 mt-1 mb-[22px] text-center text-lg;
+}
+
+#main .custom-card p {
+  @apply text-[14px];
+}
+
+.read-more-btn {
+  @apply border border-green-600 rounded bg-green-600 w-1/2 block m-auto py-1 text-white mt-[1.5rem] duration-200;
+}
+
+.read-more-btn:hover {
+  @apply bg-green-700;
+}
+
+@media (max-width: 767px) and (min-width: 200px) {
+  #main {
+    @apply flex-col;
+  }
+
+  #main .custom-card {
+    @apply p-[10px] my-2;
+  }
+}

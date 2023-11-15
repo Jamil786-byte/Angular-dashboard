@@ -1,0 +1,73 @@
+<form [formGroup]="vinGenerationForm">
+    <div class="user-form">
+        <h2 class="vin-title">VIN GENERATION</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-2 md:grid-cols-2  sm:grid-cols-1 gap-3">
+            <!-- year field -->
+            <div class="form-group">
+                <label for="name">BIW Number</label><br>
+                <input type="number" class="form-input" placeholder="Enter BIW Number">
+                <!-- <select class="form-input" formControlName="year">
+                    <option value="" selected>Select year</option>
+                    <option *ngFor="let year of yearVinGeneration" [value]="year.yearCode">{{year.yearName}}</option>
+                </select> -->
+            </div>
+
+            <!-- Location Field -->
+            <div class="form-group">
+                <label for="name">Generated VIN Number</label><br>
+                <input type="text" class="form-input" placeholder="Generated VIN Number" disabled>
+
+                <!-- <select class="form-input" formControlName="location">
+                    <option value="" selected>Select Location</option>
+                    <option *ngFor="let location of locationVinGeneration" [value]="location.locationCode">
+                        {{location.locationName}}</option>
+                </select> -->
+            </div>
+
+            <!-- Month Field -->
+            <div class="form-group">
+                <label for="name">VC Number</label><br>
+                <input type="text" class="form-input" placeholder="VC Number" disabled>
+                <!-- <select class="form-input" formControlName="month">
+                    <option value="" selected>Select Month</option>
+                    <option *ngFor="let month of monthVinGeneration" [value]="month.monthCode">{{month.monthName}}
+                    </option>
+                </select> -->
+            </div>
+
+            <div class="form-group">
+                <label for="name">Market</label><br>
+                <input type="text" class="form-input" placeholder="Market" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Model</label><br>
+                <input type="text" class="form-input" placeholder="Model" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Destination</label><br>
+                <input type="text" class="form-input" placeholder="Destination" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Color</label><br>
+                <input type="text" class="form-input" placeholder="Color" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Drive</label><br>
+                <input type="text" class="form-input" placeholder="Drive" disabled>
+            </div>
+
+            <!-- <div class="form-group">
+                <label for="name">serial Number</label><br>
+                <input type="text" class="form-input"  formControlName="serialNo" placeholder="Serial Number">
+            </div> -->
+        </div>
+        <div class="btn-section">
+            <!-- <button type="button" class="btn-cancel" *ngIf="vinGenerationOutput">Result : {{vinGenerationOutput}}</button> -->
+            <button type="submit" class="btn-submit" (click)="submitVINGeneration()">VIN Generate</button>
+        </div>
+    </div>
+</form>

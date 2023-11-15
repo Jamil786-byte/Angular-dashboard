@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&family=Poppins:wght@100&family=Roboto&display=swap");
+
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  transition: 500ms;
+  // background-color: rgb(8, 148, 241);
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

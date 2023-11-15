@@ -1,0 +1,80 @@
+<!-- <form [formGroup]="usersForm">
+    <div class="user-form">
+        <div class="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-2  sm:grid-cols-1 gap-3">
+            <div class="form-group">
+                <label for="name">Name</label><br>
+                <input type="text" class="form-input" formControlName="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="name">Email</label><br>
+                <input type="email" class="form-input" formControlName="email" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+                <label for="name">Phone Number</label><br>
+                <input type="tel" class="form-input" formControlName="phone" placeholder="Phone Number">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Profile</label><br>
+                <input type="text" class="form-input" formControlName="profile" placeholder="Profile">
+            </div>
+
+            <div class="form-group">
+                <label for="name">gender</label><br>
+                <div class="mt-[12px]">
+                    <input type="radio" class="radio" formControlName="gender" value="male"><span
+                        class="gender-title">Male</span>
+                    <input type="radio" class="radio ml-5" formControlName="gender" value="female"><span
+                        class="gender-title">Female</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn-section">
+            <button type="button" class="btn-cancel" [routerLink]="['/users/user-list']"
+                routerLinkActive="router-link-active">Cancel</button>
+            <button type="submit" class="btn-submit" (click)="submitUser()">Submit</button>
+        </div>
+    </div>
+</form>
+<br>
+<hr> -->
+<form [formGroup]="usersForm">
+    <div class="bg">
+        <div id="main">
+            <div class="form-group-section">
+                <label for="name">Name</label><br>
+                <input type="text" class="input-field" formControlName="name" placeholder="Name">
+            </div>
+
+            <div class="form-group-section">
+                <label for="name">Email</label><br>
+                <input type="email" class="input-field" formControlName="email" placeholder="Email Address">
+            </div>
+
+            <div class="form-group-section">
+                <label for="name">Phone Number</label><br>
+                <input type="tel" class="input-field" formControlName="phone" placeholder="Phone Number">
+            </div>
+
+            <div class="form-group-section">
+                <label for="name">Profile</label><br>
+                <input type="text" class="input-field" formControlName="profile" placeholder="Profile">
+            </div>
+
+            <div class="form-group-section">
+                <label for="name">gender</label><br>
+                <div class="mt-[12px]">
+                    <input type="radio" class="radio" formControlName="gender" value="male"><span
+                        class="gender-title">Male</span>
+                    <input type="radio" class="radio ml-5" formControlName="gender" value="female"><span
+                        class="gender-title">Female</span>
+                </div>
+            </div>
+        </div>
+        <div class="btn-section">
+            <button type="button" class="cancle-btn" [routerLink]="['/users/user-list']"
+                routerLinkActive="router-link-active">Cancel</button>
+            <button type="submit" class="submit-btn" style="background-color: #249dcd;" (click)="submitUser()">Submit</button>
+        </div>
+    </div>
+</form>

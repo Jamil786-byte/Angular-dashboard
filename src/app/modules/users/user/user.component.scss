@@ -1,0 +1,72 @@
+// .user-form {
+//   @apply bg-[#EFF2F7] px-4 pt-3 pb-5 rounded;
+// }
+
+// .user-form .form-group label, .gender-title {
+//   @apply font-sans font-medium text-sm tracking-[0.25px];
+// }
+
+// .user-form .form-group .form-input {
+//   @apply w-full border border-solid border-[#DDDDDD] h-[36px] px-[10px] pb-[4px] mt-[5px];
+// }
+
+// .btn-section {
+//   @apply mt-2;
+// }
+
+// .btn-section{
+//     @apply mt-8 text-right;
+// }
+// .btn-section .btn-cancel, .btn-submit  {
+//   @apply bg-black text-white px-6 pt-[6px] pb-[10px] text-sm font-medium rounded hover:bg-[#383c47];
+// }
+
+// .btn-submit{
+//     @apply bg-[#0880AE] hover:bg-[#249dcd] ml-5;
+// }
+
+// .radio{
+//   @apply w-5 h-5;
+// }
+
+// .gender-title{
+//   @apply mx-2 relative bottom-[5px];
+// }
+
+.bg {
+  @apply bg-[#EFF2F7] rounded p-3;
+}
+
+#main {
+  @apply flex flex-wrap w-full;
+}
+
+.form-group-section {
+  @apply w-[32%] mx-[6px];
+}
+
+.form-group-section .input-field {
+  @apply w-full py-[6px] px-[10px] border rounded mb-7;
+}
+
+.btn-section {
+  @apply flex justify-end;
+}
+.btn-section .cancle-btn,
+.submit-btn {
+  @apply border px-6 py-2 bg-black text-white rounded mr-3;
+}
+
+@media (max-width: 767px) and (min-width: 200px) {
+  #main {
+    @apply flex flex-wrap flex-col;
+  }
+
+  .form-group-section {
+    @apply w-full mx-[6px];
+  }
+
+  .btn-section {
+    @apply flex justify-center mt-8;
+  }
+}

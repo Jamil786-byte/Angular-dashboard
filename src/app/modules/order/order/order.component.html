@@ -1,0 +1,59 @@
+<div class="custom-card bg-white shadow-lg">
+    <div class="search-section">
+        <div class="add-user-section">
+            <button (click)="generateVin()" class="user-btn" routerLinkActive="router-link-active">
+                Generate VIN
+            </button>
+
+            <button class="export-btn user-btn ml-2" (click)="exportExcel()">Export to Excel</button>
+        </div>
+
+        <div class="search-users">
+            <div>
+                <span for="from date" class="mr-1">from date & Time</span>
+                <br>
+                <input type="datetime-local" name="fromDateTime" [(ngModel)]="fromDateTime"
+                    class="input-form mr-1 mb-2">
+            </div>
+            <div>
+                <label for="from date" class="mr-1">To date & Time</label>
+                <br>
+                <input type="datetime-local" class="input-form mb-2" name="toDateTime" [(ngModel)]="toDateTime">
+            </div>
+
+            <button type="button" class="user-btn search-btn ml-2" (click)="filter()">Search</button>
+
+        </div>
+    </div>
+
+    <table class="border-collapse border border-slate-400" id="excel-table">
+        <thead>
+            <tr>
+                <th class="border border-slate-300">BIW Number</th>
+                <th class="border border-slate-300">Chassis Type</th>
+                <th class="border border-slate-300">VC Number</th>
+                <th class="border border-slate-300">Model</th>
+                <th class="border border-slate-300">Color</th>
+                <th class="border border-slate-300">Market</th>
+                <th class="border border-slate-300">Destination</th>
+                <th class="border border-slate-300">Drive</th>
+                <th class="border border-slate-300">Generated VIN Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let vin of vinGenerationList">
+                <td class="border border-slate-300 pl-3 py-2">{{ vin.BIWNumber }}</td>
+                <td class="border border-slate-300 pl-3 py-2">{{vin.ChassisType}}</td>
+                <td class="border border-slate-300 pl-3 py-2">{{ vin.VCNumber }}</td>
+                <td class="border border-slate-300 pl-3 py-2">{{ vin.Model }}</td>
+                <td class="border border-slate-300 pl-3 py-2">{{ vin.Color }}</td>
+                <td class="border border-slate-300 pl-3 py-2">{{ vin.Market }}</td>
+                <td class="border border-slate-300 pl-3 py-2">{{ vin.Destination }}</td>
+                <td class="border border-slate-300 pl-3 py-2">{{ vin.Drive }}</td>
+                <td class="border border-slate-300 pl-3 py-2">{{ vin.Generated_VIN_Number }}</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>

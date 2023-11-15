@@ -1,0 +1,13 @@
+.footer {
+  margin-top: 10px;
+  margin-left: 16px;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) and (min-width: 200px) {
+  .footer {
+    @apply mt-0;
+  }
+}

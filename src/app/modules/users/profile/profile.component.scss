@@ -1,0 +1,156 @@
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 8.8rem);
+}
+
+.profile-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 370px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.profile-card::before {
+  display: flex;
+  align-items: center;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 32%;
+  background-color: #4070f4;
+  top: 0;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.image {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  background-color: aqua;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.image .profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.profile-card .data-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 14px 0px;
+}
+
+.data-text .name {
+  font-size: 20px;
+  font-weight: 500px;
+  margin-bottom: 10px;
+}
+
+.data-text .job {
+  font-size: 14px;
+  font-weight: 500px;
+}
+
+.profile-card .media-buttons {
+  display: flex;
+  align-items: center;
+  margin: 8px 0px;
+}
+
+.media-buttons .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background-color: #4070f4;
+  margin: 0px 8px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  margin: 16px 0px;
+}
+
+.buttons .button {
+  background-color: #4070f4;
+  color: white;
+  margin: 0px 7px;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.profile-card .analytics {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.analytics .data {
+  display: flex;
+  align-items: center;
+  color: #333;
+  padding: 0px 15px;
+  border-right: 3px solid #e7e7e7;
+}
+
+.data i {
+  margin-right: 6px;
+}
+
+.analytics .data:last-child {
+  border-right: none;
+}
+
+// Media query for responsive
+@media(max-width: 991px) and (min-width:200px) {
+  #main {
+    height: 100%;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.main-card {
+  display: flex;
+  flex-direction: row;
+  // flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  gap: 16px;
+}
+
+button {
+  border: 1px solid lightgray;
+  height: 35px;
+  padding: 0px 10px;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+  font-size: 14px;
+}

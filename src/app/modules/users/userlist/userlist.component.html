@@ -1,0 +1,53 @@
+<div class="custom-card bg-white shadow-lg">
+  <div class="search-section">
+    <div class="add-user-section">
+      <button class="user-btn" [routerLink]="['/users/user-add']" routerLinkActive="router-link-active">
+        Add User
+      </button>
+    </div>
+
+    <div class="search-users">
+      <input type="text" class="input-form" placeholder="Search by gender" [(ngModel)]="filterText">
+    </div>
+  </div>
+
+  <table class="border-collapse border border-slate-400">
+    <thead>
+      <tr>
+        <th class="border border-slate-300">Short Name</th>
+        <th class="border border-slate-300">Email</th>
+        <th class="border border-slate-300">Profile</th>
+        <th class="border border-slate-300">Phone</th>
+        <th class="border border-slate-300">Gender</th>
+        <th class="border border-slate-300">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usersList; index as index">
+        <td class="border border-slate-300 pl-3 py-2">{{index }}</td>
+        <td class="border border-slate-300 pl-3 py-2">{{ user.name}}</td>
+        <td class="border border-slate-300 pl-3 py-2">{{ user.email }}</td>
+        <td class="border border-slate-300 pl-3 py-2">{{ user.profile }}</td>
+        <td class="border border-slate-300 pl-3 py-2">{{ user.phone }}</td>
+        <td class="border border-slate-300 pl-3 py-2">{{ user.gender }}</td>
+        <td class="border border-slate-300 pl-3 py-2">
+          <a class="btn-edit" (click)="editUser(user._id)">Edit</a>
+          <a class="btn-delete" (click)="deleteUser(user._id)">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li *ngFor="let prod of productList">
+      <div [hidden]="prod.is_hide">
+        <p>Prduct name {{prod.prod_name}}</p>
+        <p>prduct price {{prod.price}}</p>
+        <p>prduct color {{prod.color}}</p>
+        <p>prduct RAM {{prod.ram}}</p>
+        <p>prduct in_stock {{prod.in_stock}}</p>
+        <p><button type="button" [disabled]="prod.in_stock == 0">Add to card</button></p>
+      </div>
+    </li>
+  </ul>
+</div>

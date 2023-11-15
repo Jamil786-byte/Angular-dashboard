@@ -1,0 +1,57 @@
+.custom-card {
+  @apply px-4 pt-2 py-3 text-justify;
+}
+
+.user-btn {
+  @apply bg-[#0880AE] w-[120px] pt-[7px] pb-[8px] text-white rounded-[2px] text-sm font-medium font-sans tracking-[0.25px] mt-3 mb-4 hover:bg-[#058cc1] ease-in-out duration-300 shadow-sm;
+}
+
+.search-section {
+  @apply flex justify-between;
+}
+.search-section .input-form {
+  @apply border mt-3 pt-[5px] pb-[6px] px-[10px] rounded;
+}
+
+table {
+  @apply w-full;
+}
+
+table thead {
+  @apply bg-slate-100;
+}
+table thead th {
+  @apply py-4 px-3 font-sans;
+}
+
+.btn-edit,
+.btn-delete {
+  @apply bg-yellow-500 px-[14px] py-[5px] text-white font-medium text-sm font-sans rounded cursor-pointer mr-3 hover:bg-yellow-700;
+}
+
+.btn-delete {
+  @apply bg-red-700 hover:bg-red-800;
+}
+
+ul {
+  padding-left: 0 !important;
+}
+
+ul li {
+  background: white;
+  color: black;
+  margin: 10px;
+}
+
+ul li p {
+  background: green;
+  padding: 10px;
+}
+
+button {
+  border: 1px solid black;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border-radius: 4px;
+}
